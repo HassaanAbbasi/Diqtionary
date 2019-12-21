@@ -48,6 +48,6 @@ def definition(word):
 word = input("Welcome to Diqtionary!\nEnter 'Q' if you want to close the program.\nEnter a word please: ") 
 while (word != "Q"):
     definition(word)
-    word = input("\nEnter 'Exit' if you want to close the program.\nEnter a word please: ")
+    word = input("\nEnter 'Q' if you want to close the program.\nEnter a word please: ")
 
 print("\nThanks for using Diqtionary!")
