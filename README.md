@@ -3,3 +3,5 @@ Diqtionary (a combination of "Dictionary" and "IQ") is a program that returns al
 
 * Provides possible words you might have meant if you input a word incorrectly
 * Recognizes acronyms
+
+To run Diqtionary, download all the files and run the "main.py" file in the "Program" directory.
