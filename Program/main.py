@@ -16,6 +16,24 @@ def definition(word):
         for definition in enum:
             print(f"{definition[0]} - {definition[1]}")
 
+    #Case where the word is a proper noun (Manchester, Paris, etc.)
+    elif (word.title() in data):
+        allDefinition = data[word.title()]
+        enum = enumerate(allDefinition,1)
+
+        print(word.title())
+        for definition in enum:
+            print(f"{definition[0]} - {definition[1]}")
+
+    #Case where the user enters acronyms (NASA,UN, etc.)
+    elif (word.upper() in data):
+        allDefinition = data[word.upper()]
+        enum = enumerate(allDefinition,1)
+
+        print(word.title())
+        for definition in enum:
+            print(f"{definition[0]} - {definition[1]}")
+
     #Case where the word is spelled incorrectly
     else:
         matches = get_close_matches(word,data)
