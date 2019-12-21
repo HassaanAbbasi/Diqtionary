@@ -45,12 +45,9 @@ def definition(word):
                     else:
                         continue
 
-word = input("Welcome to Diqtionary!\nEnter 'Exit' if you want to close the program.\nEnter a word please: ") 
-while (word != "Exit"):
-    if (word == "Exit"):
-        break
-    else:
-        definition(word)
-        word = input("\nEnter 'Exit' if you want to close the program.\nEnter a word please: ")
+word = input("Welcome to Diqtionary!\nEnter 'Q' if you want to close the program.\nEnter a word please: ") 
+while (word != "Q"):
+    definition(word)
+    word = input("\nEnter 'Exit' if you want to close the program.\nEnter a word please: ")
 
 print("\nThanks for using Diqtionary!")
