@@ -1,5 +1,8 @@
 import json
 from difflib import get_close_matches
+import tkinter
+import tkinter.font as tkFont
+from tkinter import messagebox
 
 data = json.load(open("Program/defs.json"))
 
@@ -63,9 +66,34 @@ def definition(word):
                     else:
                         continue
 
-word = input("Welcome to Diqtionary!\nEnter 'Q' if you want to close the program.\nEnter a word please: ") 
-while (word != "Q"):
-    definition(word)
-    word = input("\nEnter 'Q' if you want to close the program.\nEnter a word please: ")
+#Initializing the GUI
+window = tkinter.Tk()
+window.title("Diqtionary")
+window.minsize(300,300)
+window.iconbitmap("Program/dictionary.ico")
+messagebox.showinfo('Welcome!', "Welcome to Diqtionary! Enter a word to get it's defintion.")
 
-print("\nThanks for using Diqtionary!")
+#Defining fonts
+prompt = tkFont.Font(family="Helvetica", size = 12, weight = "bold", underline = 1)
+
+#Prompting user for word
+tkinter.Label(window, text="Enter a word please:", font = prompt).grid(row = 0, column = 0, padx = 6)
+e1 = tkinter.Entry(window)
+e1.grid(row = 0, column = 1, padx = 10, pady = 10)
+
+#Handling word
+button1 = tkinter.Button(window, text = "Get definition", command = definition)
+button1.grid(row = 1, column = 0, sticky = tkinter.W, padx = 8)
+
+#Displaying word
+#TODO
+# -Use a textbox or something?
+
+window.mainloop()
+
+# word = input("Welcome to Diqtionary!\nEnter 'Q' if you want to close the program.\nEnter a word please: ") 
+# while (word != "Q"):
+#     definition(word)
+#     word = input("\nEnter 'Q' if you want to close the program.\nEnter a word please: ")
+
+# print("\nThanks for using Diqtionary!")
