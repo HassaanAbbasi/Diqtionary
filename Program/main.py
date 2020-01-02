@@ -1,7 +1,9 @@
 import json
 from difflib import get_close_matches
+import sys
+import os
 
-data = json.load(open("defs.json"))
+data = json.load(open(os.path.join(sys.path[0], "defs.json"), "r"))
 
 #Prints the defintions of a given word
 def definition(word):
