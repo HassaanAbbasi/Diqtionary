@@ -14,11 +14,11 @@ Words with spaces are also read properly:
 
 ![Words with spaces](demo/dict1.gif)
 
-Words with many definitions are displayed in a scroll box.
+Words with many definitions are displayed in a scroll box:
 
 ![Words with many definitions](demo/dict2.gif)
 
-Lets the user know when a word isn't in the dictionary.
+Lets the user know when a word isn't in the dictionary:
 
 ![Word not found detection](demo/dict5.gif)
 
